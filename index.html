@@ -8,7 +8,17 @@
   </head>
   <body>
     <div class="layout">
-      <header>header</header>
+      <header>
+        <p class="page-title">
+          Page Title
+        </p>
+        <div class="functional">
+          <p>search</p>
+          <p>inbox</p>
+          <p>alert</p>
+          <p>profile</p>
+        </div>
+      </header>
       <nav class="sidebar">
         <h1 class="logo">Dinder</h1>
         <ul class="nav-top">
@@ -19,6 +29,7 @@
           <li>Tasks</li>
           <li>Communities</li>
         </ul>
+        <div class="spacer"></div>
         <ul class="nav-bottom">
           <li>Settings</li>
           <li>Support</li>
@@ -26,24 +37,36 @@
         </ul>
       </nav>
       <section class="content">
-        <article class="welcome">
-          <p>Hello You got A lot To DO!</p>
-        </article>
-        <section class="tasks">
-          <article class="task">
-            <p>Task 1</p>
+        <div class="to-do">
+          <article class="welcome">
+            <p>Hello You got A lot To DO!</p>
           </article>
-          <article class="task">
-            <p>Task 2</p>
+          <section class="tasks">
+            <article class="task">
+              <p>Task 1</p>
+            </article>
+            <article class="task">
+              <p>Task 2</p>
+            </article>
+            <article class="task">
+              <p>Task 3</p>
+            </article>
+            <article class="task">
+              <p>Task 4</p>
+            </article>
+          </section>
+          <article class="progress">
+            This is what you have left
           </article>
-          <article class="task">
-            <p>Task 3</p>
+        </div>
+        <div class="calendar-content">
+          <article class="calendar">
+            Calendar
           </article>
-          <article class="task">
-            <p>Task 4</p>
+          <article class="misc">
+            Other Stuff
           </article>
-        </section>
-        <article class="progress"></article>
+        </div>
       </section>
     </div>
   </body>

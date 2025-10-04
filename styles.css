@@ -74,6 +74,7 @@ h6 {
   isolation: isolate;
 }
 
+
 body,
 html {
   height: 100%;
@@ -85,15 +86,64 @@ html {
   height: 100%;
   display: grid;
   grid-template-columns: minmax(200px, 1fr) 4fr;
-  grid-template-rows: 1fr 6fr;
+  grid-template-rows: 1fr 8fr;
   grid-template-areas:
     "sidebar header"
     "sidebar content";
 }
 
 header {
-  background-color: rebeccapurple;
+  background-color: grey;
   grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+header .functional {
+  display: flex;
+  gap: 1rem;
+}
+
+.content {
+  grid-area: content;
+  background-color: grey;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.to-do {
+  background-color: grey;
+  display: grid;
+}
+
+.welcome {
+  background-color: aqua;
+}
+
+.tasks {
+  background-color: green;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.progress {
+  background-color: brown;
+}
+
+.calendar-content {
+  background-color: grey;
+  display: grid;
+}
+
+.calendar {
+  background-color: blue;
+}
+
+.misc {
+  background-color: darkorange;
 }
 
 .sidebar {
@@ -101,33 +151,33 @@ header {
   display: flex;
   flex-direction: column;
   background-color: whitesmoke;
-  justify-content: space-between;
-  gap: 10px;
-  align-items: center;
+  overflow-y: auto;
+  max-height: 100%;
 }
 
 .logo {
   align-self: center;
+  background-color: whitesmoke;
   padding: 20px 0;
+  position: sticky;
+  top: 0;
+}
+
+.spacer {
+  flex: 1;
+  max-height: 6rem;
 }
 
 .sidebar ul {
   list-style: none;
-  padding: 0;
-  flex: 1;
   width: 100%;
   align-items: center;
 }
 
 .sidebar li {
-    padding: 20px;
+  padding: 0.7rem;
 }
 
 .sidebar li:hover {
-    border-right: 10px solid orange;
-}
-
-.content {
-  background-color: green;
-  grid-area: content;
+    border-right: 1rem solid orange;
 }
