@@ -378,6 +378,10 @@ header .functional img:hover {
   background-color: var(--main-color-dinder);
 }
 
+.tickets ul {
+  background-color: var();
+}
+
 .tickets .header {
   padding: 2rem 1.2rem;
   display: flex;
@@ -409,6 +413,8 @@ header .functional img:hover {
   gap: 0.5rem;
   padding: 1.2rem;
   background-color: white;
+
+  transition: transform 0.2s ease;
 }
 
 .tickets .ticket:hover {
@@ -420,9 +426,4 @@ header .functional img:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-
-@media screen {
-  
 }
