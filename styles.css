@@ -271,14 +271,15 @@ header .functional img:hover {
   padding: 0;
 }
 
-.calendar-content {
+.calendar-and-tickets {
   display: grid;
   gap: 1rem;
   grid-template-rows: 1fr auto;
 }
 
 .calendar {
-  background-color: blue;
+  background-color: var(--main-content-color);
+  padding: 2rem;
 }
 
 .tickets {
@@ -293,7 +294,7 @@ header .functional img:hover {
 }
 
 .tickets .tickets-list {
-  display: flex;
+  display: grid;
   flex-direction: column;
   padding: 0;
   list-style-type: none;
@@ -301,8 +302,15 @@ header .functional img:hover {
 }
 
 .tickets .ticket {
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr;
+  gap: 0.5rem;
   padding: 1.2rem;
   background-color: white;
-  justify-content: space-between;
+}
+
+.tickets .ticket p:nth-child(2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
