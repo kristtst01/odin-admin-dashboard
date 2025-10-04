@@ -243,7 +243,7 @@ header .functional img:hover {
   align-items: center;
 }
 
-.progress button, .tickets button {
+.progress button {
   background-color: var(--main-color-dinder);
   padding: 0.6rem 2.5rem;
 
@@ -254,7 +254,8 @@ header .functional img:hover {
   transition: transform 0.2s ease;
 }
 
-.progress button:hover, .tickets button:hover {
+.progress button:hover,
+.tickets button:hover {
   transform: scale(1.03);
   cursor: pointer;
 }
@@ -271,26 +272,63 @@ header .functional img:hover {
   padding: 0;
 }
 
-.calendar-and-tickets {
+.events-and-tickets {
   display: grid;
   gap: 1rem;
   grid-template-rows: 1fr auto;
 }
 
-.calendar {
+.events {
   background-color: var(--main-content-color);
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.events ul {
+  flex: 1;
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 2fr);
+  gap: 1rem;
+}
+
+.events ul li {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.events ul li:nth-child(odd) {
+  background-color: var(--main-color-dinder);
+}
+
+.events ul li:nth-child(even) {
+  background-color: var(--secondary-color-dinder);
 }
 
 .tickets {
   display: flex;
   flex-direction: column;
-  background-color: var(--main-content-color);
+  background-color: var(--main-color-dinder);
 }
+
 .tickets .header {
   padding: 2rem 1.2rem;
   display: flex;
   justify-content: space-between;
+}
+
+.tickets button {
+  background-color: var(--main-content-color);
+  padding: 0.6rem 2.5rem;
+
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+
+  transition: transform 0.2s ease;
 }
 
 .tickets .tickets-list {
