@@ -202,11 +202,18 @@ header .functional img:hover {
 
 .welcome a {
   color: #000000;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.welcome a:hover {
+  text-decoration-color: var(--main-content-color);
+  transform: scale(1.03);
 }
 
 .tasks {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 2fr);
   gap: 1rem;
 }
 
@@ -214,9 +221,19 @@ header .functional img:hover {
   background-color: var(--main-content-color);
   padding: 1rem;
   display: flex;
+  justify-content: space-between;
   gap: 2rem;
   min-height: 120px;
+  padding-right: clamp(0px, 1rem, 1rem);
+
+  transition: transform 0.2s ease;
 }
+
+.task:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
 
 .task img {
   width: 2.5rem;
@@ -262,14 +279,31 @@ header .functional img:hover {
 
 .progress .task-progress {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 2rem;
+}
+
+.individual-task-progress {
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .individual-task-progress ul {
   list-style-type: decimal;
   list-style-position: inside;
   padding: 0;
+}
+
+#progress-1 {
+  background-color: #FFDAB9;
+}
+
+#progress-2 {
+  background-color: #D1E7FF;
+}
+
+#progress-3 {
+  background-color: #E8DAEF;
 }
 
 .events-and-tickets {
@@ -285,27 +319,57 @@ header .functional img:hover {
   flex-direction: column;
 }
 
+.event {
+  transition: transform 0.2s ease;
+}
+
+.event:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
 .events ul {
   flex: 1;
   list-style-type: none;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 2fr);
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-template-areas: 
+  "event-1 event-1 event-1 event-2"
+  "event-3 event-4 event-4 event-4";
   gap: 1rem;
 }
 
 .events ul li {
   border-radius: 0.5rem;
   padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.events ul li:nth-child(odd) {
+.events ul li:nth-child(2),
+.events ul li:nth-child(3) {
   background-color: var(--main-color-dinder);
 }
 
-.events ul li:nth-child(even) {
+.events ul li:nth-child(1),
+.events ul li:nth-child(4) {
   background-color: var(--secondary-color-dinder);
+}
+
+.events ul li:nth-child(1) {
+  grid-area: event-1;
+}
+.events ul li:nth-child(4) {
+  grid-area: event-4;
+}
+
+.event .event-date {
+  font-weight: 600;
+}
+
+.event-title {
+  padding-top: 1rem;
 }
 
 .tickets {
@@ -347,8 +411,18 @@ header .functional img:hover {
   background-color: white;
 }
 
+.tickets .ticket:hover {
+  cursor: pointer;
+  transform: translateX(0.5rem);
+}
+
 .tickets .ticket p:nth-child(2) {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+
+@media screen {
+  
 }
