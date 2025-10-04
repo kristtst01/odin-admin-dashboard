@@ -90,7 +90,7 @@ html {
 .layout {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 15rem 1fr;
+  grid-template-columns: 13rem 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas:
     "sidebar header"
@@ -123,13 +123,56 @@ header .functional img:hover {
   transform: scale(1.2);
 }
 
+.sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sidebar-bg-color);
+
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.logo {
+  padding: 2rem 0 2rem 4.1rem;
+  position: sticky;
+  top: 0;
+}
+
+.spacer {
+  flex: 1;
+  max-height: 6rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+  align-items: center;
+  padding: 1.5rem 0 1.5rem 1rem;
+}
+
+.sidebar li {
+  padding: 0.7rem;
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.sidebar li:hover {
+  border-right: 0.5rem solid var(--main-color-dinder);
+  cursor: pointer;
+  transform: translateX(3px);
+}
+
 .content {
   grid-area: content;
   background-color: var(--main-bg-color);
   display: grid;
   gap: 1rem;
   padding: 1rem;
-  grid-template-columns: 2fr 1.5fr
+  grid-template-columns: 2fr 1.5fr;
 }
 
 .content article {
@@ -192,13 +235,28 @@ header .functional img:hover {
   padding: 2rem;
   display: grid;
   gap: 1rem;
-
 }
 
 .progress .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.progress button, .tickets button {
+  background-color: var(--main-color-dinder);
+  padding: 0.6rem 2.5rem;
+
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+
+  transition: transform 0.2s ease;
+}
+
+.progress button:hover, .tickets button:hover {
+  transform: scale(1.03);
+  cursor: pointer;
 }
 
 .progress .task-progress {
@@ -213,59 +271,38 @@ header .functional img:hover {
   padding: 0;
 }
 
-
 .calendar-content {
   display: grid;
   gap: 1rem;
+  grid-template-rows: 1fr auto;
 }
 
 .calendar {
   background-color: blue;
 }
 
-.misc {
-  background-color: darkorange;
-}
-
-.sidebar {
-  grid-area: sidebar;
+.tickets {
   display: flex;
   flex-direction: column;
-  background-color: var(--sidebar-bg-color);
-
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow-y: auto;
+  background-color: var(--main-content-color);
 }
-
-.logo {
-  padding: 2rem 0 2rem 4.1rem;
-  position: sticky;
-  top: 0;
-}
-
-.spacer {
-  flex: 1;
-  max-height: 6rem;
-}
-
-.sidebar ul {
-  list-style: none;
-  width: 100%;
-  align-items: center;
-  padding: 1.5rem 0 1.5rem 1rem;
-}
-
-.sidebar li {
-  padding: 0.7rem;
+.tickets .header {
+  padding: 2rem 1.2rem;
   display: flex;
-  gap: 1rem;
-  transition: transform 0.2s ease;
+  justify-content: space-between;
 }
 
-.sidebar li:hover {
-  border-right: 0.5rem solid var(--main-color-dinder);
-  cursor: pointer;
-  transform: translateX(3px);
+.tickets .tickets-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  list-style-type: none;
+  flex: 1;
+}
+
+.tickets .ticket {
+  display: flex;
+  padding: 1.2rem;
+  background-color: white;
+  justify-content: space-between;
 }
