@@ -9,63 +9,146 @@
   <body>
     <div class="layout">
       <header>
-        <p class="page-title">
-          Page Title
-        </p>
+        <h2 class="page-title">Dashboard</h2>
         <div class="functional">
-          <p>search</p>
-          <p>inbox</p>
-          <p>alert</p>
-          <p>profile</p>
+          <img src="images/SVG-icons/search.svg" alt="search" />
+          <img src="images/SVG-icons/mail.svg" alt="messages" />
+          <img src="images/SVG-icons/bell.svg" alt="notifications" />
+          <img src="images/SVG-icons/user-round-pen.svg" alt="profile" />
         </div>
       </header>
       <nav class="sidebar">
         <h1 class="logo">Dinder</h1>
         <ul class="nav-top">
-          <li>Dashboard</li>
-          <li>Profile</li>
-          <li>Messages</li>
-          <li>History</li>
-          <li>Tasks</li>
-          <li>Communities</li>
+          <li>
+            <img src="images/SVG-icons/layout-dashboard.svg" alt="dashboard" />
+            <p>Dashboard</p>
+          </li>
+          <li>
+            <img src="images/SVG-icons/user-round-pen.svg" alt="profile" />
+            <p>Profile</p>
+          </li>
+          <li>
+            <img src="images/SVG-icons/mail.svg" alt="messages" />
+            <p>Messages</p>
+          </li>
+          <li>
+            <img src="images/SVG-icons/history.svg" alt="history" />
+            <p>History</p>
+          </li>
+          <li>
+            <img src="images/SVG-icons/list-todo.svg" alt="tasks" />
+            <p>Tasks</p>
+          </li>
+          <li>
+            <img src="images/SVG-icons/users.svg" alt="communities" />
+            <p>Communities</p>
+          </li>
         </ul>
         <div class="spacer"></div>
         <ul class="nav-bottom">
-          <li>Settings</li>
-          <li>Support</li>
-          <li>Privacy</li>
+          <li>
+            <img src="images/SVG-icons/settings.svg" alt="settings" />
+            <p>Settings</p>
+          </li>
+          <li>
+            <img src="images/SVG-icons/headset.svg" alt="support" />
+            <p>Support</p>
+          </li>
+          <li>
+            <img src="images/SVG-icons/shield-check.svg" alt="privacy" />
+            <p>Privacy</p>
+          </li>
         </ul>
       </nav>
       <section class="content">
         <div class="to-do">
           <article class="welcome">
-            <p>Hello You got A lot To DO!</p>
+            <div class="text">
+              <h3>Hello Pete!</h3>
+              <p>
+                You've got 7 unread messages and 4 tasks to do. Let's get
+                started!
+              </p>
+              <a href="">Review tasks</a>
+            </div>
           </article>
           <section class="tasks">
             <article class="task">
-              <p>Task 1</p>
+              <div class="task-info">
+                <h1>1</h1>
+                <div class="task-descrption">
+                  <h4>Group</h4>
+                  <p>Desc</p>
+                </div>
+              </div>
+              <img src="images/SVG-icons/layout-list.svg" alt="task graphic" />
             </article>
             <article class="task">
-              <p>Task 2</p>
+              <div class="task-info">
+                <h1>2</h1>
+                <div class="task-descrption">
+                  <h4>Group</h4>
+                  <p>Desc</p>
+                </div>
+              </div>
+              <img src="images/SVG-icons/alarm-clock.svg" alt="task graphic" />
             </article>
             <article class="task">
-              <p>Task 3</p>
+              <div class="task-info">
+                <h1>3</h1>
+                <div class="task-descrption">
+                  <h4>Group</h4>
+                  <p>Desc</p>
+                </div>
+              </div>
+              <img src="images/SVG-icons/layout-list.svg" alt="task graphic" />
             </article>
             <article class="task">
-              <p>Task 4</p>
+              <div class="task-info">
+                <h1>4</h1>
+                <div class="task-descrption">
+                  <h4>Group</h4>
+                  <p>Desc</p>
+                </div>
+              </div>
+              <img src="images/SVG-icons/sticky-note.svg" alt="task graphic" />
             </article>
           </section>
           <article class="progress">
-            This is what you have left
+            <div class="header">
+              <h2>Progress</h2>
+              <button>See All</button>
+            </div>
+            <div class="task-progress">
+              <div class="individual-task-progress">
+                <h4>Design Team</h4>
+                <ul>
+                  <li>Finalize mockups</li>
+                  <li>Review guidelines</li>
+                </ul>
+              </div>
+              <div class="individual-task-progress">
+                <h4>Development</h4>
+                <ul>
+                  <li>Fix bug</li>
+                  <li>Deploy environment</li>
+                  <li>Code review</li>
+                </ul>
+              </div>
+              <div class="individual-task-progress">
+                <h4>Marketing</h4>
+                <ul>
+                  <li>Schedule posts</li>
+                  <li>Analyze metrics</li>
+                </ul>
+              </div>
+            </div>
           </article>
         </div>
         <div class="calendar-content">
-          <article class="calendar">
-            Calendar
-          </article>
-          <article class="misc">
-            Other Stuff
-          </article>
+          <article class="calendar">Calendar</article>
+          <article class="misc">Other Stuff</article>
         </div>
       </section>
     </div>
